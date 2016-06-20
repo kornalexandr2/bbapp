@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <title>jquery.rss example</title>
+  <script src="jquery-1.6.4.min.js"></script>
+  <script src="jquery.rss.min.js"></script>
+  <script type="text/javascript" src="//vk.com/js/api/openapi.js?122"></script>
+<style>
+	#vk_groups {top: -100px;}
+	#vk_groups iframe {display:none;}
+	#vk_groups iframe:nth-child(1) {display:block;}
+</style>
+</head>
+
+<body>
+
+<!-- VK Widget -->
+<div id="vk_groups"></div>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+VK.Widgets.Group("vk_groups", {mode: 2, wide: 1, width: "auto", height: "800px", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 56138135);
+});
+
+$(window).resize(function(){
+
+$('#vk_groups').html('');
+
+$('#vk_groups').attr('style','');
+
+VK.Widgets.Group("vk_groups", {mode: 2, wide: 1, width: "auto", height: "800px", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 56138135);
+
+});
+
+</script>
+
+<!--	
+	<div>|
+		<a href="index.html">Новости</a>&nbsp|
+		<a href="soc.html"><b>Соцсети</b></a>&nbsp|
+		<a href="photo.html">Фото</a>&nbsp|
+	</div>
+-->
+	
+</body>
+
+</html>
